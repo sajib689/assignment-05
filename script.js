@@ -11,6 +11,7 @@ for(let index = 0; index < seats.length; index++){
         const seatContainerElement = document.getElementById('seat-container')
         seat.style.backgroundColor = '#1DD100';
         seat.style.color = '#fff';
+        seat.disabled = true;
         const p = document.createElement('p');
         const h3 = document.createElement('h3');
         const h4 = document.createElement('h4');
@@ -32,7 +33,7 @@ for(let index = 0; index < seats.length; index++){
         
         seatCountElement.innerText = count++;
         // button disabled condition
-        if (count >= 0) {
+        if (count >= 5) {
             const copuponCodElement = document.getElementById('copupon-btn');
             copuponCodElement.disabled = false;
         }
