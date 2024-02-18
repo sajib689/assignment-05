@@ -1,8 +1,7 @@
 
 // get the all seat from the button 
 const seats = document.querySelectorAll('.seat');
-let count = 0;
-let cost = 550;
+let sum = 0;
 for(let index = 0; index < seats.length; index++){
     const seat = seats[index];
     
@@ -15,10 +14,16 @@ for(let index = 0; index < seats.length; index++){
         const getSeatText = seat.innerText;
         p.innerText = getSeatText 
         h3.innerText = 'Economoy';
-        h4.innerText = '550';
+        h4.innerText = 550;
         seatContainerElement.appendChild(p);
         seatContainerElement.appendChild(h3);
         seatContainerElement.appendChild(h4);
         // get seat text ends
+        // get the total cost
+        const totalCostElement = document.getElementById('total-cost')
+        const getCostElement = seatContainerElement.querySelector('h4').innerText;
+        const getCost = parseFloat(getCostElement);
+        sum += getCost
+        totalCostElement.innerText = sum
     });
 }
