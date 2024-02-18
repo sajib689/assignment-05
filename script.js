@@ -31,9 +31,19 @@ for(let index = 0; index < seats.length; index++){
         const seatCountElement = document.getElementById('seat-select-count')
         
         seatCountElement.innerText = count++;
+        // button disabled condition
         if (count >= 0) {
             const copuponCodElement = document.getElementById('copupon-btn');
             copuponCodElement.disabled = false;
         }
+        // grand total calculation area
+        const grandTotalElement = document.getElementById('grand-total');
+        grandTotalElement.innerText = sum
+        // seat left condition
+        let seatLeftElement = document.getElementById('seat-left');
+        let seatLeft = parseFloat(seatLeftElement.innerText);
+        seatLeft--; 
+        seatLeftElement.innerText = seatLeft;  
+        
     });
 }
