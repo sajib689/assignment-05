@@ -348,8 +348,8 @@
         </div>
         <!-- cupon code section -->
         <div class="w-[70%] ms-20 mt-20 flex justify-center items-center">
-          <label class="   flex items-center gap-2">
-            <input type="text" class="grow focus:border-transparent focus:outline-none" placeholder="Have any copupon?" />
+          <label class="flex items-center gap-2">
+            <input id="copupon-code" type="text" class="grow focus:border-transparent focus:outline-none" placeholder="Have any copupon?" />
             <button id="copupon-btn" class="btn btn-accent text-white" disabled>Apply</button>
 
           </label>
@@ -361,6 +361,35 @@
             <h1>BDT <span id="grand-total">0</span></h1> 
           </div>
         </div>
+        <!-- details area -->
+            
+            <div class="ms-20 card shrink-0 w-[80%] shadow-2xl bg-base-100">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Passenger Name*</span>
+                  </label>
+                  <input type="text" placeholder="Enter your name" class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Phone Number*</span>
+                  </label>
+                  <input type="number" placeholder="Enter your phone number" class="input input-bordered" required />
+                 
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Email ID</span>
+                  </label>
+                  <input type="text" placeholder="Enter your email id" class="input input-bordered" required />
+                 
+                </div>
+                <div class="form-control mt-6">
+                  <button class="btn bg-[#1DD100] text-white hover:bg-[#28c111]">Next</button>
+                </div>
+              </form>
+            </div>
       </div>
     </section>
     <script src="./script.js"></script>

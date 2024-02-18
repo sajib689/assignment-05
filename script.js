@@ -54,3 +54,10 @@ for(let index = 0; index < seats.length; index++){
         
     });
 }
+
+// copupon code calculation area
+
+document.getElementById('copupon-btn').addEventListener('click', function(){
+    const codeElement = document.getElementById('copupon-code').value;
+    console.log(codeElement);
+});
