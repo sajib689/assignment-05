@@ -29,6 +29,11 @@ for(let index = 0; index < seats.length; index++){
         sum += getCost
         totalCostElement.innerText = sum
         const seatCountElement = document.getElementById('seat-select-count')
+        
         seatCountElement.innerText = count++;
+        if (count >= 0) {
+            const copuponCodElement = document.getElementById('copupon-btn');
+            copuponCodElement.disabled = false;
+        }
     });
 }
