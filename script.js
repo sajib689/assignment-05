@@ -8,6 +8,8 @@ for(let index = 0; index < seats.length; index++){
     seat.addEventListener('click', function(){
         // get seat details
         const seatContainerElement = document.getElementById('seat-container')
+        seat.style.backgroundColor = '#1DD100';
+        seat.style.color = '#fff';
         const p = document.createElement('p');
         const h3 = document.createElement('h3');
         const h4 = document.createElement('h4');
