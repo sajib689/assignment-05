@@ -71,14 +71,14 @@ for(let index = 0; index < seats.length; index++){
 
 document.getElementById('copupon-btn').addEventListener('click', function(){
     const codeElement = document.getElementById('copupon-code').value;
-    const copuponCodElement = document.getElementById('copupon-btn');
+    const copuponCodElement = document.getElementById('none');
     if(codeElement === 'NEW15'){
         const grandTotalElement = document.getElementById('grand-total').innerText;
         const grandTotal = parseFloat(grandTotalElement);
         const discount = grandTotal * 0.15
         const cost = grandTotal - discount
         document.getElementById('grand-total').innerText = cost
-        copuponCodElement.disabled = true;
+        copuponCodElement.style.display = 'none';
     } else if(codeElement === 'Couple 20'){
         const grandTotalElement = document.getElementById('grand-total').innerText;
         const grandTotal = parseFloat(grandTotalElement);
@@ -86,5 +86,12 @@ document.getElementById('copupon-btn').addEventListener('click', function(){
         const cost = grandTotal - discount
         document.getElementById('grand-total').innerText = cost
         copuponCodElement.disabled = true;
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...Invalid discount code",
+            text: "Something went wrong!",
+            footer: '<a href="#">Why do I have this issue?</a>'
+          });
     }
 });
