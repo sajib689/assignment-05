@@ -59,5 +59,21 @@ for(let index = 0; index < seats.length; index++){
 
 document.getElementById('copupon-btn').addEventListener('click', function(){
     const codeElement = document.getElementById('copupon-code').value;
-    console.log(codeElement);
+    const numberElement = document.getElementById('number');
+    
+    if(codeElement === 'NEW15'){
+        const grandTotalElement = document.getElementById('grand-total').innerText;
+        const grandTotal = parseFloat(grandTotalElement);
+        const discount = grandTotal * 0.15
+        const cost = grandTotal - discount
+        document.getElementById('grand-total').innerText = cost
+       
+    } else if(codeElement === 'Couple 20'){
+        const grandTotalElement = document.getElementById('grand-total').innerText;
+        const grandTotal = parseFloat(grandTotalElement);
+        const discount = grandTotal * 0.20
+        const cost = grandTotal - discount
+        document.getElementById('grand-total').innerText = cost
+       
+    }
 });
