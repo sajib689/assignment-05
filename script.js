@@ -3,19 +3,23 @@
 const seats = document.querySelectorAll('.seat');
 let sum = 0;
 let count = 1;
+ 
+function checkInput() {
+    const numberElement = document.getElementById('number');
+    const nextButtonElement = document.getElementById('next-btn');
+
+    if (numberElement.value.length > 0) {
+      nextButtonElement.disabled = false;
+    } else {
+      nextButtonElement.disabled = true;
+    }
+  }
 for(let index = 0; index < seats.length; index++){
     const seat = seats[index];
     
     seat.addEventListener('click', function(){
         // get seat details
-        
-    const numberElement = document.getElementById('number').value;
-    console.log(numberElement)
-    const nextButtonElement = document.getElementById('next-btn');
-    if (count > 0 && numberElement.length > 1) {
-    nextButtonElement.disabled = false;
-
-    }
+        checkInput()
         if (count === 5) {
             seat.disabled = true;
             return
@@ -67,20 +71,20 @@ for(let index = 0; index < seats.length; index++){
 
 document.getElementById('copupon-btn').addEventListener('click', function(){
     const codeElement = document.getElementById('copupon-code').value;
-    
+    const copuponCodElement = document.getElementById('copupon-btn');
     if(codeElement === 'NEW15'){
         const grandTotalElement = document.getElementById('grand-total').innerText;
         const grandTotal = parseFloat(grandTotalElement);
         const discount = grandTotal * 0.15
         const cost = grandTotal - discount
         document.getElementById('grand-total').innerText = cost
-       
+        copuponCodElement.disabled = true;
     } else if(codeElement === 'Couple 20'){
         const grandTotalElement = document.getElementById('grand-total').innerText;
         const grandTotal = parseFloat(grandTotalElement);
         const discount = grandTotal * 0.20
         const cost = grandTotal - discount
         document.getElementById('grand-total').innerText = cost
-       
+        copuponCodElement.disabled = true;
     }
 });
