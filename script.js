@@ -102,7 +102,7 @@ document.getElementById('next-btn').addEventListener('click', function() {
         title: "Your work has been saved",
         text: "Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.Shortly you will find a confirmation in your email.",
         confirmButtonText: "Continue",
-        showConfirmButton: false,
+        showConfirmButton: true,
         timer: 1500
       });
 })
