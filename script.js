@@ -8,6 +8,14 @@ for(let index = 0; index < seats.length; index++){
     
     seat.addEventListener('click', function(){
         // get seat details
+        
+    const numberElement = document.getElementById('number').value;
+    console.log(numberElement)
+    const nextButtonElement = document.getElementById('next-btn');
+    if (count > 0 && numberElement.length > 1) {
+    nextButtonElement.disabled = false;
+
+    }
         if (count === 5) {
             seat.disabled = true;
             return
@@ -59,7 +67,6 @@ for(let index = 0; index < seats.length; index++){
 
 document.getElementById('copupon-btn').addEventListener('click', function(){
     const codeElement = document.getElementById('copupon-code').value;
-    const numberElement = document.getElementById('number');
     
     if(codeElement === 'NEW15'){
         const grandTotalElement = document.getElementById('grand-total').innerText;
