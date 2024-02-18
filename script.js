@@ -2,6 +2,7 @@
 // get the all seat from the button 
 const seats = document.querySelectorAll('.seat');
 let sum = 0;
+let count = 1;
 for(let index = 0; index < seats.length; index++){
     const seat = seats[index];
     
@@ -27,5 +28,7 @@ for(let index = 0; index < seats.length; index++){
         const getCost = parseFloat(getCostElement);
         sum += getCost
         totalCostElement.innerText = sum
+        const seatCountElement = document.getElementById('seat-select-count')
+        seatCountElement.innerText = count++;
     });
 }
