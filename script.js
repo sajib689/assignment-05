@@ -95,3 +95,14 @@ document.getElementById('copupon-btn').addEventListener('click', function(){
           });
     }
 });
+document.getElementById('next-btn').addEventListener('click', function() {
+    Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Your work has been saved",
+        text: "Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.Shortly you will find a confirmation in your email.",
+        confirmButtonText: "Continue",
+        showConfirmButton: false,
+        timer: 1500
+      });
+})
