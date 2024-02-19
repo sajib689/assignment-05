@@ -7,8 +7,8 @@ let count = 1;
 function checkInput() {
     const numberElement = document.getElementById('number');
     const nextButtonElement = document.getElementById('next-btn');
-
-    if (numberElement.value.length > 0) {
+    console.log(numberElement.value.length)
+    if (numberElement.value.length > 0 && count > 0) {
       nextButtonElement.disabled = false;
     } else {
       nextButtonElement.disabled = true;
@@ -19,7 +19,7 @@ for(let index = 0; index < seats.length; index++){
     
     seat.addEventListener('click', function(){
         // get seat details
-        checkInput()
+        // checkInput()
         if (count === 5) {
             seat.disabled = true;
             return

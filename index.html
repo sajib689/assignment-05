@@ -381,7 +381,7 @@
                   <label class="label">
                     <span class="label-text">Phone Number*</span>
                   </label>
-                  <input id="number" type="number" placeholder="Enter your phone number" class="input input-bordered" required />
+                  <input onchange="checkInput()" id="number" type="number" placeholder="Enter your phone number" class="input input-bordered" required />
                  
                 </div>
                 <div class="form-control">
@@ -392,7 +392,7 @@
                  
                 </div>
                 <div class="form-control mt-6">
-                  <button id="next-btn" oninput="checkInput()" id="next-btn" class="btn bg-[#1DD100] text-white hover:bg-[#28c111]" disabled>Next</button>
+                  <button id="next-btn"  id="next-btn" class="btn bg-[#1DD100] text-white hover:bg-[#28c111]" disabled>Next</button>
                 </div>
               </form>
             </div>
