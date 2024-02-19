@@ -99,8 +99,8 @@ document.getElementById('next-btn').addEventListener('click', function() {
     Swal.fire({
         position: "top-center",
         icon: "success",
-        title: "Your work has been saved",
-        text: "Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.Shortly you will find a confirmation in your email.",
+        title: "Thank you for Booking Our Bus Seats.",
+        text: " We are working hard to find the best service and deals for you.Shortly you will find a confirmation in your email.",
         confirmButtonText: "Continue",
         showConfirmButton: true,
         timer: 1500
