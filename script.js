@@ -85,7 +85,7 @@ document.getElementById('copupon-btn').addEventListener('click', function(){
         const discount = grandTotal * 0.20
         const cost = grandTotal - discount
         document.getElementById('grand-total').innerText = cost
-        copuponCodElement.disabled = true;
+        copuponCodElement.style.display = 'none';
     } else {
         Swal.fire({
             icon: "error",
